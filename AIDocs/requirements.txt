@@ -1,0 +1,32 @@
+# Core Dependencies
+google-generativeai>=0.3.0
+python-dotenv>=1.0.0
+
+# PDF Processing
+pdfplumber>=0.10.0
+PyPDF2>=3.0.0
+pytesseract>=0.3.10
+pdf2image>=1.16.3
+Pillow>=10.0.0
+
+# Vector Store
+chromadb>=0.4.22
+
+# Text Processing
+nltk>=3.8.1
+spacy>=3.7.0
+
+# Configuration
+pyyaml>=6.0.1
+
+# Web Framework
+streamlit>=1.29.0
+streamlit-chat>=0.1.1
+
+# Utilities
+numpy>=1.24.0
+pandas>=2.0.0
+tqdm>=4.66.0
+
+# Optional: For better text processing
+sentence-transformers>=2.2.0

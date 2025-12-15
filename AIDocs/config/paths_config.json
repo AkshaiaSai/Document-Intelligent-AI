@@ -1,0 +1,9 @@
+{
+    "data_dir": "data",
+    "raw_pdfs_dir": "data/raw_pdfs",
+    "extracted_texts_dir": "data/extracted_texts",
+    "processed_chunks_dir": "data/processed_chunks",
+    "embeddings_dir": "data/embeddings",
+    "temp_images_dir": "data/temp_images",
+    "chroma_persist_dir": "data/embeddings/chroma_db"
+}

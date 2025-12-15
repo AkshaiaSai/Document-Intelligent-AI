@@ -1,0 +1,68 @@
+2025-12-15 10:36:52,377 - src.main - INFO - Initializing RAG Pipeline...
+2025-12-15 10:36:52,379 - src.pdf_extraction.ocr_handler - INFO - OCR Handler initialized with language=eng, dpi=300
+2025-12-15 10:36:52,380 - src.pdf_extraction.pdf_extractor - INFO - PDF Extractor initialized
+2025-12-15 10:36:52,382 - src.chunking.chunker - INFO - Text Chunker initialized: 600 words, 75 overlap
+2025-12-15 10:36:52,383 - src.embeddings.embedding_generator - INFO - Embedding Generator initialized: models/text-embedding-004, dim=768
+2025-12-15 10:36:53,425 - src.embeddings.embedding_generator - INFO - Embedding Generator initialized: models/text-embedding-004, dim=768
+2025-12-15 10:36:53,425 - src.vector_store.chroma_manager - INFO - ChromaDB initialized: collection='pdf_documents', persist_dir='data/embeddings/chroma_db'
+2025-12-15 10:36:53,426 - src.qa_pipeline.query_expander - INFO - Query Expander initialized: gemini-1.5-flash
+2025-12-15 10:36:53,427 - src.qa_pipeline.retriever - INFO - Hybrid Retriever initialized: top_k=8, threshold=0.3
+2025-12-15 10:36:53,427 - src.qa_pipeline.answer_generator - INFO - Answer Generator initialized: gemini-1.5-flash
+2025-12-15 10:36:53,427 - src.main - INFO - RAG Pipeline initialized successfully
+2025-12-15 10:36:53,428 - src.main - INFO - Processing PDF: data/raw_pdfs/sample1.pdf
+2025-12-15 10:36:53,428 - src.pdf_extraction.pdf_extractor - INFO - Processing PDF: data/raw_pdfs/sample1.pdf
+2025-12-15 10:36:53,443 - src.pdf_extraction.pdf_extractor - INFO - Extracted text from 1 pages using pdfplumber
+2025-12-15 10:36:53,443 - src.pdf_extraction.pdf_extractor - INFO - Extraction complete: 1 pages, 680 characters
+2025-12-15 10:36:53,443 - src.main - ERROR - Error processing data/raw_pdfs/sample1.pdf: Object of type IndirectObject is not JSON serializable
+2025-12-15 10:36:53,443 - src.main - INFO - Processing PDF: data/raw_pdfs/sample2.pdf
+2025-12-15 10:36:53,443 - src.pdf_extraction.pdf_extractor - INFO - Processing PDF: data/raw_pdfs/sample2.pdf
+2025-12-15 10:36:53,516 - src.pdf_extraction.pdf_extractor - INFO - Extracted text from 3 pages using pdfplumber
+2025-12-15 10:36:53,516 - src.pdf_extraction.pdf_extractor - INFO - Extraction complete: 3 pages, 2756 characters
+2025-12-15 10:36:53,516 - src.pdf_extraction.pdf_extractor - INFO - Saved extraction result to data/extracted_texts/sample2_extracted.json
+2025-12-15 10:36:53,516 - src.chunking.chunker - INFO - Created 3 chunks from 3 pages
+2025-12-15 10:36:53,516 - src.vector_store.chroma_manager - INFO - Adding 3 chunks to ChromaDB
+2025-12-15 10:36:53,516 - src.vector_store.chroma_manager - INFO - Chunks don't have embeddings, generating them...
+2025-12-15 10:36:53,516 - src.embeddings.embedding_generator - INFO - Embedding 3 chunks
+2025-12-15 10:37:50,899 - src.embeddings.embedding_generator - ERROR - Error generating embedding: Timeout of 60.0s exceeded, last exception: 503 DNS resolution failed for generativelanguage.googleapis.com:443: C-ares status is not ARES_SUCCESS qtype=SRV name=_grpclb._tcp.generativelanguage.googleapis.com: Could not contact DNS servers
+2025-12-15 10:38:48,329 - src.embeddings.embedding_generator - ERROR - Error generating embedding: Timeout of 60.0s exceeded, last exception: 503 DNS resolution failed for generativelanguage.googleapis.com:443: C-ares status is not ARES_SUCCESS qtype=A name=generativelanguage.googleapis.com is_balancer=0: Could not contact DNS servers
+2025-12-15 10:41:37,912 - src.main - INFO - Initializing RAG Pipeline...
+2025-12-15 10:41:37,917 - src.pdf_extraction.ocr_handler - INFO - OCR Handler initialized with language=eng, dpi=300
+2025-12-15 10:41:37,918 - src.pdf_extraction.pdf_extractor - INFO - PDF Extractor initialized
+2025-12-15 10:41:37,920 - src.chunking.chunker - INFO - Text Chunker initialized: 600 words, 75 overlap
+2025-12-15 10:41:37,921 - src.embeddings.embedding_generator - INFO - Embedding Generator initialized: models/text-embedding-004, dim=768
+2025-12-15 10:41:38,044 - src.embeddings.embedding_generator - INFO - Embedding Generator initialized: models/text-embedding-004, dim=768
+2025-12-15 10:41:38,045 - src.vector_store.chroma_manager - INFO - ChromaDB initialized: collection='pdf_documents', persist_dir='data/embeddings/chroma_db'
+2025-12-15 10:41:38,045 - src.qa_pipeline.query_expander - INFO - Query Expander initialized: gemini-1.5-flash
+2025-12-15 10:41:38,046 - src.qa_pipeline.retriever - INFO - Hybrid Retriever initialized: top_k=8, threshold=0.3
+2025-12-15 10:41:38,046 - src.qa_pipeline.answer_generator - INFO - Answer Generator initialized: gemini-1.5-flash
+2025-12-15 10:41:38,046 - src.main - INFO - RAG Pipeline initialized successfully
+2025-12-15 10:41:38,047 - src.main - INFO - Processing PDF: data/raw_pdfs/sample1.pdf
+2025-12-15 10:41:38,047 - src.pdf_extraction.pdf_extractor - INFO - Processing PDF: data/raw_pdfs/sample1.pdf
+2025-12-15 10:41:38,061 - src.pdf_extraction.pdf_extractor - INFO - Extracted text from 1 pages using pdfplumber
+2025-12-15 10:41:38,061 - src.pdf_extraction.pdf_extractor - INFO - Extraction complete: 1 pages, 680 characters
+2025-12-15 10:41:38,061 - src.pdf_extraction.pdf_extractor - INFO - Saved extraction result to data/extracted_texts/sample1_extracted.json
+2025-12-15 10:41:38,061 - src.chunking.chunker - INFO - Created 1 chunks from 1 pages
+2025-12-15 10:41:38,061 - src.vector_store.chroma_manager - INFO - Adding 1 chunks to ChromaDB
+2025-12-15 10:41:38,061 - src.vector_store.chroma_manager - INFO - Chunks don't have embeddings, generating them...
+2025-12-15 10:41:38,061 - src.embeddings.embedding_generator - INFO - Embedding 1 chunks
+2025-12-15 11:16:44,672 - src.main - INFO - Initializing RAG Pipeline...
+2025-12-15 11:16:44,676 - src.pdf_extraction.ocr_handler - INFO - OCR Handler initialized with language=eng, dpi=300
+2025-12-15 11:16:44,677 - src.pdf_extraction.pdf_extractor - INFO - PDF Extractor initialized
+2025-12-15 11:16:44,679 - src.chunking.chunker - INFO - Text Chunker initialized: 600 words, 75 overlap
+2025-12-15 11:17:13,805 - src.embeddings.embedding_generator - INFO - Embedding Generator initialized: models/text-embedding-004, dim=768
+2025-12-15 11:17:13,952 - src.embeddings.embedding_generator - INFO - Embedding Generator initialized: models/text-embedding-004, dim=768
+2025-12-15 11:17:13,953 - src.vector_store.chroma_manager - INFO - ChromaDB initialized: collection='pdf_documents', persist_dir='data/embeddings/chroma_db'
+2025-12-15 11:17:13,953 - src.qa_pipeline.query_expander - INFO - Query Expander initialized: gemini-1.5-flash
+2025-12-15 11:17:13,954 - src.qa_pipeline.retriever - INFO - Hybrid Retriever initialized: top_k=8, threshold=0.3
+2025-12-15 11:17:13,954 - src.qa_pipeline.answer_generator - INFO - Answer Generator initialized: gemini-1.5-flash
+2025-12-15 11:17:13,954 - src.main - INFO - RAG Pipeline initialized successfully
+2025-12-15 11:17:13,955 - src.main - INFO - Processing PDF: data/raw_pdfs/sample2.pdf
+2025-12-15 11:17:13,955 - src.pdf_extraction.pdf_extractor - INFO - Processing PDF: data/raw_pdfs/sample2.pdf
+2025-12-15 11:17:14,028 - src.pdf_extraction.pdf_extractor - INFO - Extracted text from 3 pages using pdfplumber
+2025-12-15 11:17:14,028 - src.pdf_extraction.pdf_extractor - INFO - Extraction complete: 3 pages, 2756 characters
+2025-12-15 11:17:14,029 - src.pdf_extraction.pdf_extractor - INFO - Saved extraction result to data/extracted_texts/sample2_extracted.json
+2025-12-15 11:17:14,029 - src.chunking.chunker - INFO - Created 3 chunks from 3 pages
+2025-12-15 11:17:14,029 - src.vector_store.chroma_manager - INFO - Adding 3 chunks to ChromaDB
+2025-12-15 11:17:14,029 - src.vector_store.chroma_manager - INFO - Chunks don't have embeddings, generating them...
+2025-12-15 11:17:14,029 - src.embeddings.embedding_generator - INFO - Embedding 3 chunks
+2025-12-15 11:18:12,242 - src.embeddings.embedding_generator - ERROR - Error generating embedding: Timeout of 60.0s exceeded, last exception: 503 DNS resolution failed for generativelanguage.googleapis.com:443: C-ares status is not ARES_SUCCESS qtype=SRV name=_grpclb._tcp.generativelanguage.googleapis.com: Could not contact DNS servers

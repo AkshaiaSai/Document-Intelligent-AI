@@ -1,0 +1,29 @@
+chunking:
+  chunk_size_words: 600
+  overlap_words: 75
+  min_chunk_size_words: 100
+
+retrieval:
+  top_k: 8
+  similarity_threshold: 0.3
+  use_hybrid_search: true
+  keyword_weight: 0.3
+  semantic_weight: 0.7
+
+query_expansion:
+  enabled: true
+  min_variations: 3
+  max_variations: 7
+  use_synonyms: true
+  use_reformulation: true
+
+ocr:
+  enabled: true
+  language: "eng"
+  dpi: 300
+  preprocessing: true
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/rag_agent.log"
